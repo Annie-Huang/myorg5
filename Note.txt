@@ -1,0 +1,19 @@
+Nx, Dev Tools for Monorepos - In-Depth Explainer with Victor Savkin
+https://www.youtube.com/watch?v=h5FIGDn5YM0
+https://github.com/Annie-Huang/myorg5
+
+https://nx.dev/angular/tutorial/01-create-application
+
+==============================================
+
+C:\react>npx create-nx-workspace
+npx: installed 199 in 18.931s
+? Workspace name (e.g., org name)     myorg5
+? What to create in the new workspace angular           [a workspace with a single Angular application]
+? Application name                    shop
+? Default stylesheet format           CSS
+
+command the above script is running:
+new myorg5 --preset="angular" --appName="shop" --style="css" --interactive=false --collection=@nrwl/workspace
+
+

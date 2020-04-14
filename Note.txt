@@ -17,3 +17,19 @@ command the above script is running:
 new myorg5 --preset="angular" --appName="shop" --style="css" --interactive=false --collection=@nrwl/workspace
 
 
+C:\react\myorg5>ng build shop       <<< Standard ng build
+C:\react\myorg5>nx build shop       <<< Standard nx build, which is wrapping ng, BUI this will run much faster the 2nd time optimized.
+
+C:\react\myorg5>nx test shop        <<< The same as running 'ng run shop:test', but will it be faster?
+
+C:\react\myorg5>nx e2e shop-e2e --watch
+It default got cypress installed when you setup angular workspace:
+    "cypress": "^4.1.0",
+    "@nrwl/cypress": "9.2.2"
+
+
+C:\react\myorg5>nx serve shop
+
+
+Why do we need this script for every postinstall????
+"postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"

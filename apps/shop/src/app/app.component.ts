@@ -12,10 +12,7 @@ import { Component } from '@angular/core';
         {{cart.length}} items in the cart
       </div>
 
-      <div class="item" *ngFor="let item of items">
-        <p>{{item.description}}</p>
-        <button (click)="addToCart(item.code)" [attr.code]="item.code">Add to cart</button>
-      </div>
+      <myorg5-item-list [items]="items" (addToCart)="addToCart($event)"></myorg5-item-list>
     </main>
   `,
   styleUrls: ['./app.component.css'],
@@ -25,14 +22,6 @@ import { Component } from '@angular/core';
         padding: 5px;
         margin: 10px 0;
         background-color: lightblue;
-      }
-
-      div.item {
-        padding: 5px;
-        margin: 10px 0;
-        border: 1px solid grey;
-        display: flex;
-        justify-content: space-between;
       }
     `
   ]

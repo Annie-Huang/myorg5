@@ -24,6 +24,8 @@ C:\react\myorg5>nx build shop       <<< Standard nx build, which is wrapping ng,
 
 C:\react\myorg5>nx test shop        <<< The same as running 'ng run shop:test', but will it be faster?
 
+
+C:\react\myorg5>nx e2e shop-e2e --headless
 C:\react\myorg5>nx e2e shop-e2e --watch
 It default got cypress installed when you setup angular workspace:
     "cypress": "^4.1.0",
@@ -56,3 +58,5 @@ C:\react\myorg5>nx g component item-list --project=ui --dry-run
 Notice
 import { UiModule } from '@myorg5/ui';
 It takes a @<OrgName>/<LibName>
+
+

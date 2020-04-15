@@ -1,4 +1,4 @@
-import { text, number, boolean } from '@storybook/addon-knobs';
+import { text, object } from '@storybook/addon-knobs';
 import { ItemListComponent } from './item-list.component';
 
 export default {
@@ -11,6 +11,6 @@ export const primary = () => ({
   },
   component: ItemListComponent,
   props: {
-    items: text('items', ),
+    items: object('items', [{code: 'blanket', description: 'fancy blanket'}]),
   }
 })

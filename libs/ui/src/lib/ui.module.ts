@@ -4,6 +4,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [ItemListComponent]
+  declarations: [ItemListComponent],
+  exports: [ItemListComponent]
 })
 export class UiModule {}

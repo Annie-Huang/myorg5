@@ -12,14 +12,14 @@ import { RouterModule } from '@angular/router';
     UiModule,
     RouterModule.forRoot([
       {
-        path: 'feature-main',
+        path: '',
         loadChildren: () =>
           import('@myorg5/feature-main').then(
             module => module.FeatureMainModule
           )
       },
       {
-        path: 'feature-about',
+        path: 'about',
         loadChildren: () =>
           import('@myorg5/feature-about').then(
             module => module.FeatureAboutModule

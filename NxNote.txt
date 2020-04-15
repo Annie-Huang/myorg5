@@ -13,6 +13,7 @@ new myorg5 --preset="angular" --appName="shop" --style="css" --interactive=false
 
 C:\react\myorg5>ng build shop       <<< Standard ng build
 C:\react\myorg5>nx build shop       <<< Standard nx build, which is wrapping ng, BUI this will run much faster the 2nd time optimized.
+C:\react\myorg5>nx build shop --prod
 C:\react\myorg5>nx serve shop
 
 C:\react\myorg5>nx test shop        <<< The same as running 'ng run shop:test', but will it be faster?
@@ -43,8 +44,24 @@ C:\react\myorg5>nx serve shop --port=5200
 C:\react\myorg5>nx dep-graph
 
 C:\react\myorg5>nx test feature-main
-C:\react\myorg5>nx test shop --with-deps --parallel           <<<< This is mostly useful, test app shops and all the libs that shops depends on
+C:\react\myorg5>nx test shop --with-deps --parallel           <<<< !!! This is mostly useful, test app shops and all the libs that shops depends on
 
+C:\react\myorg5>nx g app admin      <<< generate another app
+C:\react\myorg5>nx dep-graph
+
+C:\react\myorg5>nx test shop --with-deps --parallel
+C:\react\myorg5>nx test admin --with-deps --parallel
+
+
+nx run-many --target=serve --projects=one,two,three --parallel                             <<< default --maxParallel is 3.
+nx run-many --target=serve --projects=one,two,three,four --parallel --maxParallel=100
+C:\react\myorg5>nx run-many --target=test --all                                            <<< !!! This is mostly useful, to test all the apps and libs uni test
+
+
+C:\react\myorg5>nx affected:libs
+C:\react\myorg5>nx affected:apps
+C:\react\myorg5>nx affected:dep-graph       <<< you can choose between Select Affected and Select All button
+C:\react\myorg5>nx affected:test
 
 
 

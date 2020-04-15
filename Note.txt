@@ -8,6 +8,14 @@ https://github.com/angular/angular/issues/33100
 
 ==============================================
 
+Nx - set of dev tools for monorepos
+
+1. Use modern tools
+2. Computation caching and affected:*
+3. Helps you develop like Google, Facebook, Twitter
+
+----------
+
 C:\react>npx create-nx-workspace
 npx: installed 199 in 18.931s
 ? Workspace name (e.g., org name)     myorg5
@@ -148,6 +156,23 @@ C:\react\myorg5>nx g app admin
 
 C:\react\myorg5>nx dep-graph
     <<< you can see admin has a dependency for ui as well.
+
+C:\react\myorg5>nx test shop --with-deps --parallel
+C:\react\myorg5>nx test admin --with-deps --parallel
+    <<< When you run these two in sequence, you will notice that when running the admin test, it doesn't rerun the ui project test.
+        Because it's already run during the shop test.
+
+
+nx run-many --target=serve --projects=one,two,three --parallel        <<< default --maxParallel is 3.
+nx run-many --target=serve --projects=one,two,three,four --parallel --maxParallel=100
+C:\react\myorg5>nx run-many --target=test --all
+
+
+C:\react\myorg5>nx affected:libs
+C:\react\myorg5>nx affected:apps
+C:\react\myorg5>nx affected:dep-graph       <<< you can choose between Select Affected and Select All button
+C:\react\myorg5>nx affected:test
+
 
 
 

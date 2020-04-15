@@ -53,4 +53,6 @@ C:\react\myorg5>nx g lib ui
 
 C:\react\myorg5>nx g component item-list --project=ui --dry-run
 
-
+Notice
+import { UiModule } from '@myorg5/ui';
+It takes a @<OrgName>/<LibName>

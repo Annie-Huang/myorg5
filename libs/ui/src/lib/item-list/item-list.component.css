@@ -1,0 +1,7 @@
+div.item {
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+}

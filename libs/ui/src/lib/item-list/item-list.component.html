@@ -1,1 +1,5 @@
-<p>item-list works!</p>
+<h2>Items</h2>
+<div class="item" *ngFor="let item of items">
+  <p>{{item.description}}</p>
+  <button (click)="addToCart(item.code)" [attr.code]="item.code">Add to cart</button>
+</div>

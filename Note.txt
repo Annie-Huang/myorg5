@@ -51,3 +51,6 @@ is for linux is force (f) making the symbolic (s) links (ln)
 C:\react\myorg5>nx g lib ui
 ? Which stylesheet format would you like to use? CSS
 
+C:\react\myorg5>nx g component item-list --project=ui --dry-run
+
+

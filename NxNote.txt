@@ -19,3 +19,11 @@ C:\react\myorg5>nx e2e shop-e2e --watch
 C:\react\myorg5>nx g lib ui
 C:\react\myorg5>nx g component item-list --project=ui --dry-run
 
+C:\react\myorg5>nx list
+C:\react\myorg5>nx list @nrwl/storybook
+C:\react\myorg5>npm install --save-dev @nrwl/storybook
+C:\react\myorg5>nx list @nrwl/storybook
+
+C:\react\myorg5>nx g storybook-configuration ui
+C:\react\myorg5>nx run ui:storybook
+C:\react\myorg5>nx e2e ui-e2e --watch

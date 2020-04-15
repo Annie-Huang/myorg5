@@ -6,46 +6,15 @@ import { Component } from '@angular/core';
     <header class="flex">
       <img src="https://nx.dev/assets/images/nx-logo-white.svg" alt="Nx logo" width="75">
       <h1>Welcome to {{title}}!</h1>
-    </header>
-    <main>
-      <div class="cart">
-        {{cart.length}} items in the cart
+      <div style="margin: 20px; background: white;">
+        <a routerLink="/about">About</a> &nbsp;
+        <a routerLink="/">Items</a>
       </div>
-
-      <myorg5-item-list [items]="items" (addToCart)="addToCart($event)"></myorg5-item-list>
-    </main>
+    </header>
+    <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app.component.css'],
-  styles: [
-    `
-      div.cart {
-        padding: 5px;
-        margin: 10px 0;
-        background-color: lightblue;
-      }
-    `
-  ]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'shop';
-  items = [
-    {
-      code: 'blanket',
-      description: 'weight blanket'
-    },
-    {
-      code: 'pillow',
-      description: 'large soft pillow'
-    },
-    {
-      code: 'mattress',
-      description: 'queen size firm mattress'
-    },
-  ];
-
-  cart = [];
-
-  addToCart(code: string) {
-    this.cart.push(code);
-  }
 }

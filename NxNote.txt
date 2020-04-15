@@ -1,3 +1,7 @@
+https://www.youtube.com/watch?v=lozIzU0ik2s   (Caching Nx Commands)
+
+-------------------------------------------
+
 C:\react>npx create-nx-workspace
 npx: installed 199 in 18.931s
 ? Workspace name (e.g., org name)     myorg5
@@ -27,3 +31,33 @@ C:\react\myorg5>nx list @nrwl/storybook
 C:\react\myorg5>nx g storybook-configuration ui
 C:\react\myorg5>nx run ui:storybook
 C:\react\myorg5>nx e2e ui-e2e --watch
+
+
+
+--------------------------
+https://www.youtube.com/watch?v=lozIzU0ik2s   (Caching Nx Commands)
+
+In Nx 8.11, you can configure Nx to use a local cache for builder command outputs - similar to the caching that Google's Bazel does.
+In specific scenarios, this makes your builder commands nearly instantaneous.
+
+nx run my-app:build
+nx run my-app:lint
+nx run my-app:test
+
+Need to add in nx.json:
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/tasks-runner-v2",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test"]
+      }
+    }
+  },
+
+Cache is stored in node_modules/.cache/nx/ folder
+
+You can delete the dist folder and run the command the 3rd time. And you will find it as fast as the 2nd time.
+
+When you make any modification on the code set and run the command again. It will be slow for the 1st time as it needs to rebuild everything.
+It sounds useful when you make modification on your app while your lib is unchanged so don't need to rebuild.
+

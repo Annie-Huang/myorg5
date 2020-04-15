@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@myorg5/ui": ["libs/ui/src/index.ts"]
+      "@myorg5/ui": ["libs/ui/src/index.ts"],
+      "@myorg5/feature-main": ["libs/feature-main/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

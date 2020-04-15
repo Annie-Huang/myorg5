@@ -30,18 +30,17 @@
     },
     "shop-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "shop"
-      ]
+      "implicitDependencies": ["shop"]
     },
     "ui": {
       "tags": []
     },
     "ui-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "ui"
-      ]
+      "implicitDependencies": ["ui"]
+    },
+    "feature-main": {
+      "tags": []
     }
   }
 }

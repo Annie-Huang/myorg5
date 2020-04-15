@@ -7,7 +7,19 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, UiModule, RouterModule.forRoot([])],
+  imports: [
+    BrowserModule,
+    UiModule,
+    RouterModule.forRoot([
+      {
+        path: 'feature-main',
+        loadChildren: () =>
+          import('@myorg5/feature-main').then(
+            module => module.FeatureMainModule
+          )
+      }
+    ])
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

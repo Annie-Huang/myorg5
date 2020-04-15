@@ -146,7 +146,8 @@ C:\react\myorg5>nx g app admin
 ? Would you like to configure routing for this application? No
 
 
-
+C:\react\myorg5>nx dep-graph
+    <<< you can see admin has a dependency for ui as well.
 
 
 

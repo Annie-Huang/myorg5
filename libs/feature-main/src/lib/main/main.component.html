@@ -1,1 +1,7 @@
-<p>main works!</p>
+<main>
+  <div class="cart">
+    {{cart.length}} items in the cart
+  </div>
+
+  <myorg5-item-list [items]="items" (addToCart)="addToCart($event)"></myorg5-item-list>
+</main>

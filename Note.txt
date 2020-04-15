@@ -120,3 +120,7 @@ C:\react\myorg5>nx g lib feature-about --parent-module=apps/shop/src/app/app.mod
 
 C:\react\myorg5>nx g component main --project=feature-main
 C:\react\myorg5>nx g component about --project=feature-about
+
+C:\react\myorg5>nx serve shop
+C:\react\myorg5>nx serve shop --port=5200
+http://localhost:5200/

@@ -139,3 +139,15 @@ C:\react\myorg5>nx test shop --with-deps --parallel
         If say all is passed initially and you make change on about (3.).
         If you run again it will only run against 1. and 3.
         It will basically return the affected files plus its parents, plus all the failed projects.
+
+
+C:\react\myorg5>nx g app admin
+? Which stylesheet format would you like to use? CSS
+? Would you like to configure routing for this application? No
+
+
+
+
+
+
+

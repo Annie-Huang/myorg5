@@ -32,7 +32,7 @@ It default got cypress installed when you setup angular workspace:
 
 C:\react\myorg5>nx serve shop
 
-
+-----------
 Why do we need this script for every postinstall????
 "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
 https://github.com/angular/angular/issues/33100
@@ -46,3 +46,8 @@ So, when running ivy-ngcc (now renamed to ngcc btw) without any arguments, it wi
 
 "postinstall-new": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points && ln -sf ./nx ./node_modules/.bin/ng"
 is for linux is force (f) making the symbolic (s) links (ln)
+--------------
+
+C:\react\myorg5>nx g lib ui
+? Which stylesheet format would you like to use? CSS
+

@@ -17,6 +17,13 @@ import { RouterModule } from '@angular/router';
           import('@myorg5/feature-main').then(
             module => module.FeatureMainModule
           )
+      },
+      {
+        path: 'feature-about',
+        loadChildren: () =>
+          import('@myorg5/feature-about').then(
+            module => module.FeatureAboutModule
+          )
       }
     ])
   ],

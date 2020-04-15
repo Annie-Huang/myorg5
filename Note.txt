@@ -113,3 +113,6 @@ http://localhost:4401/
 C:\react\myorg5>nx g lib feature-main --parent-module=apps/shop/src/app/app.module.ts --routing --lazy
 ? Which stylesheet format would you like to use? CSS
     <<< Go to another component that is stored in the lib through lazy routing url
+
+C:\react\myorg5>nx g lib feature-about --parent-module=apps/shop/src/app/app.module.ts --routing --lazy
+? Which stylesheet format would you like to use? CSS

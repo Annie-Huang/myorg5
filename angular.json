@@ -229,6 +229,34 @@
         }
       },
       "schematics": {}
+    },
+    "feature-about": {
+      "projectType": "library",
+      "root": "libs/feature-about",
+      "sourceRoot": "libs/feature-about/src",
+      "prefix": "myorg5",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/feature-about/tsconfig.lib.json",
+              "libs/feature-about/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/feature-about/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/feature-about/jest.config.js",
+            "tsConfig": "libs/feature-about/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/feature-about/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

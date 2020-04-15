@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
+      {path: '', pathMatch: 'full', component: AboutComponent}
     ])
   ],
   declarations: [AboutComponent]

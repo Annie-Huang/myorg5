@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
+      {path: '', pathMatch: 'full', component: MainComponent}
     ])
   ],
   declarations: [MainComponent]

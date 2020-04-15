@@ -116,3 +116,6 @@ C:\react\myorg5>nx g lib feature-main --parent-module=apps/shop/src/app/app.modu
 
 C:\react\myorg5>nx g lib feature-about --parent-module=apps/shop/src/app/app.module.ts --routing --lazy
 ? Which stylesheet format would you like to use? CSS
+
+
+C:\react\myorg5>nx g component main --project=feature-main

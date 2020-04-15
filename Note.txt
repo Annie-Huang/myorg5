@@ -3,6 +3,8 @@ https://www.youtube.com/watch?v=h5FIGDn5YM0
 https://github.com/Annie-Huang/myorg5
 
 https://nx.dev/angular/tutorial/01-create-application
+https://github.com/angular/angular/issues/33100
+
 
 ==============================================
 
@@ -33,3 +35,14 @@ C:\react\myorg5>nx serve shop
 
 Why do we need this script for every postinstall????
 "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+https://github.com/angular/angular/issues/33100
+Almost 😃 ivy-ngcc does not create app versions; it transforms Angular dependencies to be in Ivy format (i.e. as if they had been compiled by ngtsc (the Ivy compiler)).
+Each Angular dependency you have in your node_modules/ can have up to 4 different formats
+(different sets of files) - es2015, es5, commonjs, umd - that ngcc knows how to transform.
+                            ---------------------------
+So, when running ivy-ngcc (now renamed to ngcc btw) without any arguments, it will transform all formats of each dependency that exist
+(some dependencies may not provide all formats).
+
+
+"postinstall-new": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points && ln -sf ./nx ./node_modules/.bin/ng"
+is for linux is force (f) making the symbolic (s) links (ln)

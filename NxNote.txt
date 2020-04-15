@@ -32,6 +32,20 @@ C:\react\myorg5>nx g storybook-configuration ui
 C:\react\myorg5>nx run ui:storybook
 C:\react\myorg5>nx e2e ui-e2e --watch
 
+C:\react\myorg5>nx g lib feature-main --parent-module=apps/shop/src/app/app.module.ts --routing --lazy
+C:\react\myorg5>nx g lib feature-about --parent-module=apps/shop/src/app/app.module.ts --routing --lazy
+
+C:\react\myorg5>nx g component main --project=feature-main
+C:\react\myorg5>nx g component about --project=feature-about
+
+C:\react\myorg5>nx serve shop
+C:\react\myorg5>nx serve shop --port=5200
+C:\react\myorg5>nx dep-graph
+
+C:\react\myorg5>nx test feature-main
+C:\react\myorg5>nx test shop --with-deps --parallel           <<<< This is mostly useful, test app shops and all the libs that shops depends on
+
+
 
 
 --------------------------

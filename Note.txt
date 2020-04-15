@@ -124,3 +124,18 @@ C:\react\myorg5>nx g component about --project=feature-about
 C:\react\myorg5>nx serve shop
 C:\react\myorg5>nx serve shop --port=5200
 http://localhost:5200/
+
+
+C:\react\myorg5>nx dep-graph      <<< http://127.0.0.1:4211/
+
+C:\react\myorg5>nx test feature-main
+C:\react\myorg5>nx test shop --with-deps --parallel
+    <<< run all test in parallel
+        This is includes
+        > ng run shop:test              1.
+        > ng run feature-main:test      2.
+        > ng run feature-about:test     3.
+        > ng run ui:test                4.
+        If say all is passed initially and you make change on about (3.).
+        If you run again it will only run against 1. and 3.
+        It will basically return the affected files plus its parents, plus all the failed projects.

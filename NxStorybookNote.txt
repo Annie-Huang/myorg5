@@ -2,6 +2,9 @@
 C:\react\myorg5>nx g lib ui-datepicker --dry-run
 ? Which stylesheet format would you like to use? CSS
 
+C:\react\myorg5>nx g component date-picker --project=ui-datepicker
+
+
 
 
 

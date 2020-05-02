@@ -49,4 +49,11 @@ C:\react\myorg5>nx generate @nrwl/angular:storybook-configuration --name=storybo
 (no for everything because we just use it as a wrapper for all the stories in other folders)
 
 
+In C:\react\myorg5\libs\storybook\.storybook\config.js
+Change:
+configure(require.context('../src/lib', true, /\.stories\.tsx?$/), module);
+to
+configure(require.context('../..', true, /\.stories\.tsx?$/), module);
 
+
+C:\react\myorg5>nx run storybook:storybook

@@ -20,7 +20,8 @@
       "@myorg5/feature-main": ["libs/feature-main/src/index.ts"],
       "@myorg5/feature-about": ["libs/feature-about/src/index.ts"],
       "@myorg5/ui-datepicker": ["libs/ui-datepicker/src/index.ts"],
-      "@myorg5/ui-greeter": ["libs/ui-greeter/src/index.ts"]
+      "@myorg5/ui-greeter": ["libs/ui-greeter/src/index.ts"],
+      "@myorg5/storybook": ["libs/storybook/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

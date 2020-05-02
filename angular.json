@@ -17,13 +17,8 @@
             "polyfills": "apps/shop/src/polyfills.ts",
             "tsConfig": "apps/shop/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/shop/src/favicon.ico",
-              "apps/shop/src/assets"
-            ],
-            "styles": [
-              "apps/shop/src/styles.css"
-            ],
+            "assets": ["apps/shop/src/favicon.ico", "apps/shop/src/assets"],
+            "styles": ["apps/shop/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -81,10 +76,7 @@
               "apps/shop/tsconfig.app.json",
               "apps/shop/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/shop/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/shop/**"]
           }
         },
         "test": {
@@ -119,13 +111,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/shop-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/shop-e2e/**"
-            ]
+            "tsConfig": ["apps/shop-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/shop-e2e/**"]
           }
         }
       }
@@ -143,10 +130,7 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ui/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ui/**"]
           }
         },
         "test": {
@@ -212,13 +196,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/ui-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ui-e2e/**"
-            ]
+            "tsConfig": ["apps/ui-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ui-e2e/**"]
           }
         }
       }
@@ -236,10 +215,7 @@
               "libs/feature-main/tsconfig.lib.json",
               "libs/feature-main/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/feature-main/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/feature-main/**"]
           }
         },
         "test": {
@@ -267,10 +243,7 @@
               "libs/feature-about/tsconfig.lib.json",
               "libs/feature-about/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/feature-about/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/feature-about/**"]
           }
         },
         "test": {
@@ -301,13 +274,8 @@
             "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/admin/src/favicon.ico",
-              "apps/admin/src/assets"
-            ],
-            "styles": [
-              "apps/admin/src/styles.css"
-            ],
+            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+            "styles": ["apps/admin/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -365,10 +333,7 @@
               "apps/admin/tsconfig.app.json",
               "apps/admin/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/admin/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/admin/**"]
           }
         },
         "test": {
@@ -403,13 +368,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/admin-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/admin-e2e/**"
-            ]
+            "tsConfig": ["apps/admin-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/admin-e2e/**"]
           }
         }
       }
@@ -427,10 +387,7 @@
               "libs/ui-datepicker/tsconfig.lib.json",
               "libs/ui-datepicker/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ui-datepicker/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ui-datepicker/**"]
           }
         },
         "test": {
@@ -496,16 +453,39 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/ui-datepicker-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ui-datepicker-e2e/**"
-            ]
+            "tsConfig": ["apps/ui-datepicker-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ui-datepicker-e2e/**"]
           }
         }
       }
+    },
+    "ui-greeter": {
+      "projectType": "library",
+      "root": "libs/ui-greeter",
+      "sourceRoot": "libs/ui-greeter/src",
+      "prefix": "myorg5",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-greeter/tsconfig.lib.json",
+              "libs/ui-greeter/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-greeter/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-greeter/jest.config.js",
+            "tsConfig": "libs/ui-greeter/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui-greeter/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

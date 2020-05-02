@@ -51,6 +51,9 @@
     "admin-e2e": {
       "tags": [],
       "implicitDependencies": ["admin"]
+    },
+    "ui-datepicker": {
+      "tags": []
     }
   }
 }

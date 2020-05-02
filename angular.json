@@ -373,6 +373,34 @@
           }
         }
       }
+    },
+    "ui-datepicker": {
+      "projectType": "library",
+      "root": "libs/ui-datepicker",
+      "sourceRoot": "libs/ui-datepicker/src",
+      "prefix": "myorg5",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-datepicker/tsconfig.lib.json",
+              "libs/ui-datepicker/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-datepicker/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-datepicker/jest.config.js",
+            "tsConfig": "libs/ui-datepicker/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui-datepicker/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

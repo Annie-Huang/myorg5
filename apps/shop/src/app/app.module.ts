@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UiModule } from '@myorg5/ui';
 import { RouterModule } from '@angular/router';
+import { UiGreeterModule } from '@myorg5/ui-greeter';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,8 @@ import { RouterModule } from '@angular/router';
             module => module.FeatureAboutModule
           )
       }
-    ])
+    ]),
+    UiGreeterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

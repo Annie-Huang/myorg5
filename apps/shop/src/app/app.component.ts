@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
         <a routerLink="/">Items</a>
       </div>
     </header>
+    <myorg5-greeter></myorg5-greeter>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.css']

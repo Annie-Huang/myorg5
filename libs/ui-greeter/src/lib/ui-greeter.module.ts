@@ -4,6 +4,9 @@ import { GreeterComponent } from './greeter/greeter.component';
 
 @NgModule({
   imports: [CommonModule],
+  exports: [
+    GreeterComponent
+  ],
   declarations: [GreeterComponent]
 })
 export class UiGreeterModule {}

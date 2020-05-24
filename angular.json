@@ -17,7 +17,15 @@
             "polyfills": "apps/shop/src/polyfills.ts",
             "tsConfig": "apps/shop/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/shop/src/favicon.ico", "apps/shop/src/assets"],
+            "assets": [
+              "apps/shop/src/favicon.ico",
+              "apps/shop/src/assets",
+              {
+                "input": "libs/ui-greeter/src/assets",
+                "glob": "**/*",
+                "output": "assets/ui-greeter"
+              }
+            ],
             "styles": ["apps/shop/src/styles.css"],
             "scripts": []
           },

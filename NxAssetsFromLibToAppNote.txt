@@ -1,0 +1,31 @@
+
+https://nx.dev/assets/images/nrwl-logo.svg
+
+=======================================================
+
+1. Create C:\react\myorg5\libs\ui-greeter\src\assets folder
+
+2. Use the lib name for image src:
+    src="/assets/<lib-name>/nrwl-logo.svg"
+    <img height="30" width="98" src="/assets/ui-greeter/nrwl-logo.svg" alt="">
+
+3. Go to angular.json, the app that will use this lib:
+  "projects": {
+    "shop": {
+      "architect": {
+        "build": {
+          "options": {
+            "assets": [
+              {
+                "input": "libs/ui-greeter/src/assets",
+                "glob": "**/*",
+                "output": "assets/ui-greeter"             << "assets/<lib-name>"
+              }
+            ],
+          }
+        }
+      }
+    }
+  }
+
+4. Restart the app because you change angular.json
